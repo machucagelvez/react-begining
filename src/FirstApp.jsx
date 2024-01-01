@@ -15,9 +15,10 @@ export const FirstApp = ({title, subTitle, name}) => {
   return (
     <>
       {/* Con funciones asíncronas se genera un error porque devuelve un objeto: */}
-      <h1>{title}</h1>
+      <h1 data-testid="test-title"> {title} </h1>
       {/* <h1>{getMessage()}</h1> */}
       {/* <code>{JSON.stringify(newMessage)}</code> */}
+      <p>{subTitle}</p>
       <p>{subTitle}</p>
       <p>{name}</p>
     </>
@@ -27,11 +28,11 @@ export const FirstApp = ({title, subTitle, name}) => {
 // Los PropTypes sirven para tipar las props
 FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.number.isRequired,
+  subTitle: PropTypes.string.isRequired,
 }
 
 FirstApp.defaultProps = {
   name: 'Ozzy',
   subTitle: 'No hay subtítulo',
-  title: 'No hay título',
+  // title: 'No hay título',
 }

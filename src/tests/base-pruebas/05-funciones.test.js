@@ -9,7 +9,7 @@ describe('Tests in 05-funciones', () => {
 
     const user = getUser()
 
-    // los objetos se comparan con respecto a su ubicación en memoria
+    // Los objetos se comparan con respecto a su ubicación en memoria
     // Por eso no se puede utilizar el toBe()
     expect(testUser).toEqual(user)
   })
